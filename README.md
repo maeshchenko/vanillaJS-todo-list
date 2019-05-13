@@ -1,2 +1,2 @@
 # vanillaJS-todo-list
-This is simple ToDo-list based on Vanilla JS
+Это простой To-Do лист, написанный на чистом JS с использованием css-фреймоворка Materialize (https://materializecss.com/)
