@@ -104,7 +104,7 @@ function storeTaskInLocalStorage(task){
 //remove task
 function removeTask(e){
   if(e.target.parentElement.classList.contains('delete-item')){
-    if(confirm('Are you sure?')){
+    if(confirm('Удалить задачу?')){
       e.target.parentElement.parentElement.remove();
 
       //remove from LS
@@ -133,12 +133,13 @@ function removeTaskFromLocalStorage(taskItem, index){
 
 //clear tasks
 function clearTasks(e){
-  while(taskList.firstChild){
-    taskList.removeChild(taskList.firstChild);
+  if(confirm('Удалить все задачи?')){
+    while(taskList.firstChild){
+      taskList.removeChild(taskList.firstChild);
+    };
+    //clear tasks from LS
+    clearTasksFromLocalStorage();
   }
-
-  //clear tasks from LS
-  clearTasksFromLocalStorage();
 }
 
 //clear tasks from LS
